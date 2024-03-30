@@ -1,2 +1,4 @@
 import streamlit as st
-st.write("# hello world")
+st.header("logistic regression")
+st.title("it has 8 input")
+
