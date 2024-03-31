@@ -2,11 +2,9 @@ import streamlit as st
 import pandas as pd
 
 import pickle
-pic=open('regression','rb')
-mj=pickle.load(pic)
+with open('regression','rb') as pic:
+mj = pickle.load(pic)
 
-import joblib
-mj = joblib.load('regression_model.joblib')
 
 def prediction(rainfall,riverdist,faultdist,slope):
   prediction=mj.predict([[rainfall,riverdist,faultdist,slope]])
