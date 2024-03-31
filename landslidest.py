@@ -20,7 +20,7 @@ def main():
 if st.button("predict"):
   result=prediction(rainfall,riverdist,faultdist,slope)
 st.success("the output is{}".format(result))
- if __name__=="__main__":
+if __name__=="__main__":
    main()
   
 #X_test=[[ 0.77093807,0.00823664,0.35703567,2.45688651]]
