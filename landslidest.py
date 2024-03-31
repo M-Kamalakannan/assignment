@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 
-from pickle5 import pickle
+import pickle
 with open('regression','rb') as pic:
   mj = pickle.load(pic)
 
