@@ -1,11 +1,15 @@
 import streamlit as st
 import pandas as pd
+'''
 import pickle
 pic=open('regression','rb')
 calssifier=pickle.load(pic)
+'''
+import joblib
+mj = joblib.load('regression_model.joblib')
 
 def prediction(rainfall,riverdist,faultdist,slope):
-  prediction=classifier.predict([[rainfall,riverdist,faultdist,slope]])
+  prediction=mj.predict([[rainfall,riverdist,faultdist,slope]])
   print(prediction)
   return prediction
 def main():
@@ -25,7 +29,6 @@ if __name__=="__main__":
   
 #X_test=[[ 0.77093807,0.00823664,0.35703567,2.45688651]]
 
-#mj = joblib.load('regression_model.joblib')
 #predicted=mj.predict(X_test)
 #st.subheader(predicted)
 
