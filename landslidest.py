@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pickle
-pic=open('Regression',rb)
+pic=open('regression',rb)
 calssifier=pickle.load(pic)
 
 def prediction(rainfall,riverdist,faultdist,slope):
