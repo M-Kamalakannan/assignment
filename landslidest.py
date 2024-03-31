@@ -1,8 +1,8 @@
-! pip install pickle
+
 import streamlit as st
 import pandas as pd
 
-import pickle
+import pickle5 import pickle
 with open('regression','rb') as pic:
   mj = pickle.load(pic)
 
