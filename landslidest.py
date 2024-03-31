@@ -3,7 +3,7 @@ import pandas as pd
 
 import pickle
 with open('regression','rb') as pic:
-mj = pickle.load(pic)
+  mj = pickle.load(pic)
 
 
 def prediction(rainfall,riverdist,faultdist,slope):
