@@ -1,7 +1,8 @@
+
 import streamlit as st
 import pandas as pd
 
-import pickle
+import pickle4 as pickle
 with open('regression','rb') as pic:
   mj = pickle.load(pic)
 
