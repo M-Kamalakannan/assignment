@@ -1,10 +1,10 @@
 import streamlit as st
 import pandas as pd
-'''
+
 import pickle
 pic=open('regression','rb')
-calssifier=pickle.load(pic)
-'''
+mj=pickle.load(pic)
+
 import joblib
 mj = joblib.load('regression_model.joblib')
 
@@ -27,8 +27,4 @@ st.success("the output is{}".format(result))
 if __name__=="__main__":
    main()
   
-#X_test=[[ 0.77093807,0.00823664,0.35703567,2.45688651]]
-
-#predicted=mj.predict(X_test)
-#st.subheader(predicted)
 
