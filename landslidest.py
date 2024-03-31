@@ -1,6 +1,6 @@
-import sklearn
+
 import streamlit as st
-import pandas as pd
+
 import pandas as pd
 df=pd.read_excel("preprocessed_data.xlsx")
 from sklearn.model_selection import train_test_split
