@@ -1,14 +1,26 @@
 import sklearn
 import streamlit as st
 import pandas as pd
+import pandas as pd
+df=pd.read_excel("preprocessed_data.xlsx")
+from sklearn.model_selection import train_test_split
+from sklearn import datasets, linear_model, metrics
 
-import pickle
-with open('regression','rb') as pic:
-  mj = pickle.load(pic)
+y = df[['Risk_Level']]
+x = df[['AAP.mm.','RiverDIST.m.','FaultDIST.m.','Slop.Percent.']]
 
+X_train, X_test,y_train, y_test = train_test_split(x, y,test_size=0.005,random_state=1)
+
+from sklearn.preprocessing import StandardScaler
+scaler = StandardScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+reg = linear_model.LogisticRegression()
+reg.fit(X_train, y_train)
 
 def prediction(rainfall,riverdist,faultdist,slope):
-  prediction=mj.predict([[rainfall,riverdist,faultdist,slope]])
+  prediction=reg.predict([[rainfall,riverdist,faultdist,slope]])
   print(prediction)
   return prediction
 def main():
