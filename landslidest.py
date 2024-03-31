@@ -8,7 +8,7 @@ def prediction(rainfall,riverdist,faultdist,slope):
   prediction=classifier.predict([[rainfall,riverdist,faultdist,slope]])
   print(prediction)
   return prediction
-def main(:
+def main():
   st.title("risk of landslide occurance prediction")
   html_temp=" "
   st.markdown(html_temp,unsafe_allow_html =True)
