@@ -2,7 +2,7 @@
 import streamlit as st
 
 import pandas as pd
-df=pd.read_excel("preprocessed_data.xlsx")
+df=pd.read_excel("https://docs.google.com/spreadsheets/d/1OlwN-yM2MNcl-DbQFwiMf7mIpjq-ilug/edit?usp=sharing&ouid=114463273554819023402&rtpof=true&sd=true")
 from sklearn.model_selection import train_test_split
 from sklearn import datasets, linear_model, metrics
 
